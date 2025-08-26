@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Principal</title>
+</head>
+<body>
+    <h1>Bem-vindo, {{ username }}!</h1>
+    <p>Este é o cardápio do seu restaurante, carregado do seu banco de dados.</p>
+    
+    <h2>Nosso Cardápio</h2>
+    <ul>
+        {% for item in menu_items %}
+            <li>{{ item.item }} - {{ item.preco }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/logout">Sair</a>
+</body>
+</html>
